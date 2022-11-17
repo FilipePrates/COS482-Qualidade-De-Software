@@ -1,0 +1,33 @@
+{
+  "calculaLifeStylerApp": {
+    "customerServiceProcess": {
+      "home": {
+        "title": "Customer Service Processes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Customer Service Process",
+        "createOrEditLabel": "Create or edit a Customer Service Process",
+        "notFound": "No Customer Service Processes found"
+      },
+      "created": "A new Customer Service Process is created with identifier {{ param }}",
+      "updated": "A Customer Service Process is updated with identifier {{ param }}",
+      "deleted": "A Customer Service Process is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer Service Process {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Service Process"
+      },
+      "id": "ID",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "customerName": "Customer Name",
+      "employeeName": "Employee Name",
+      "customerSatisfaction": "Customer Satisfaction",
+      "orderDescription": "Order Description",
+      "paymentValue": "Payment Value",
+      "paymentDescription": "Payment Description",
+      "expenseValue": "Expense Value",
+      "expenseDescription": "Expense Description"
+    }
+  }
+}

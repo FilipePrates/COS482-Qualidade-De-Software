@@ -1,0 +1,33 @@
+{
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "start-form",
+  "processBpmnId": "CustomerServiceProcess",
+  "processEntityName": "CustomerServiceProcess",
+  "domainEntityName": "CustomerService",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "CustomerServiceStartForm",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

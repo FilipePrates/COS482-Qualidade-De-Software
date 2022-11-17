@@ -1,0 +1,56 @@
+{
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "employeeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerSatisfaction",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "orderDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paymentDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expenseValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "expenseDescription",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "process-binding",
+  "processBpmnId": "CustomerServiceProcess",
+  "domainEntityName": "CustomerService",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "name": "CustomerServiceProcess",
+  "changelogDate": "20210401000002",
+  "skipFakeData": true
+}

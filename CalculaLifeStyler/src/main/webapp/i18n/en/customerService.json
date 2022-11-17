@@ -1,0 +1,25 @@
+{
+  "calculaLifeStylerApp": {
+    "customerService": {
+      "home": {
+        "title": "Customer Services",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Customer Services found"
+      },
+      "detail": {
+        "title": "Customer Service"
+      },
+      "id": "ID",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "customerName": "Customer Name",
+      "employeeName": "Employee Name",
+      "customerSatisfaction": "Customer Satisfaction",
+      "orderDescription": "Order Description",
+      "paymentValue": "Payment Value",
+      "paymentDescription": "Payment Description",
+      "expenseValue": "Expense Value",
+      "expenseDescription": "Expense Description"
+    }
+  }
+}

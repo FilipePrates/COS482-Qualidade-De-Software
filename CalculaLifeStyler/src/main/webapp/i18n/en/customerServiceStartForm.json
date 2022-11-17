@@ -1,0 +1,27 @@
+{
+  "calculaLifeStylerApp": {
+    "customerServiceStartForm": {
+      "home": {
+        "title": "Customer Service Start Forms",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Customer Service Start Form",
+        "createOrEditLabel": "Create or edit a Customer Service Start Form",
+        "notFound": "No Customer Service Start Forms found"
+      },
+      "created": "A new Customer Service Start Form is created with identifier {{ param }}",
+      "updated": "A Customer Service Start Form is updated with identifier {{ param }}",
+      "deleted": "A Customer Service Start Form is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Customer Service Start Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer Service Start Form"
+      },
+      "id": "ID",
+      "name": "Name",
+      "startDate": "Start Date",
+      "customerName": "Customer Name",
+      "employeeName": "Employee Name"
+    }
+  }
+}
