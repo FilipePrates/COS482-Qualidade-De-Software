@@ -1,0 +1,29 @@
+{
+  "calculaLifeStylerApp": {
+    "taskRegisterPayment": {
+      "home": {
+        "title": "Task Register Payments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Register Payment",
+        "createOrEditLabel": "Create or edit a Task Register Payment",
+        "notFound": "No Task Register Payments found"
+      },
+      "created": "A new Task Register Payment is created with identifier {{ param }}",
+      "updated": "A Task Register Payment is updated with identifier {{ param }}",
+      "deleted": "A Task Register Payment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Register Payment {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Register Payment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "serviceDate": "Service Date",
+      "customerSatisfaction": "Customer Satisfaction",
+      "orderDescription": "Order Description",
+      "paymentValue": "Payment Value",
+      "paymentDescription": "Payment Description"
+    }
+  }
+}

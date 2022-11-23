@@ -18,8 +18,8 @@
         "title": "Customer Service Process"
       },
       "id": "ID",
-      "startDate": "Start Date",
-      "endDate": "End Date",
+      "name": "Name",
+      "serviceDate": "Service Date",
       "customerName": "Customer Name",
       "employeeName": "Employee Name",
       "customerSatisfaction": "Customer Satisfaction",

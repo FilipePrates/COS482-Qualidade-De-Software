@@ -18,8 +18,8 @@
         <thead>
           <tr>
             <th scope="row"><span v-text="$t('global.field.id')">ID</span></th>
-            <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.startDate')">Start Date</span></th>
-            <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.endDate')">End Date</span></th>
+            <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.name')">Name</span></th>
+            <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.serviceDate')">Service Date</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.customerName')">Customer Name</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.employeeName')">Employee Name</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.customerSatisfaction')">Customer Satisfaction</span></th>
@@ -38,8 +38,8 @@
                 customerService.id
               }}</router-link>
             </td>
-            <td>{{ customerService.startDate }}</td>
-            <td>{{ customerService.endDate }}</td>
+            <td>{{ customerService.name }}</td>
+            <td>{{ customerService.serviceDate }}</td>
             <td>{{ customerService.customerName }}</td>
             <td>{{ customerService.employeeName }}</td>
             <td>{{ customerService.customerSatisfaction }}</td>

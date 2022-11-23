@@ -7,16 +7,16 @@
         </h2>
         <dl class="row jh-entity-details">
           <dt>
-            <span v-text="$t('calculaLifeStylerApp.customerService.startDate')">Start Date</span>
+            <span v-text="$t('calculaLifeStylerApp.customerService.name')">Name</span>
           </dt>
           <dd>
-            <span>{{ customerService.startDate }}</span>
+            <span>{{ customerService.name }}</span>
           </dd>
           <dt>
-            <span v-text="$t('calculaLifeStylerApp.customerService.endDate')">End Date</span>
+            <span v-text="$t('calculaLifeStylerApp.customerService.serviceDate')">Service Date</span>
           </dt>
           <dd>
-            <span>{{ customerService.endDate }}</span>
+            <span>{{ customerService.serviceDate }}</span>
           </dd>
           <dt>
             <span v-text="$t('calculaLifeStylerApp.customerService.customerName')">Customer Name</span>

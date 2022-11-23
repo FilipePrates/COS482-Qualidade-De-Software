@@ -19,29 +19,31 @@
               </h5>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.startDate')">startDate</label>
+                  <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.name')">name</label>
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="startDate"
-                    id="customer-service-startDate"
-                    data-cy="startDate"
-                    v-model="customerServiceProcess.customerService.startDate"
+                    name="name"
+                    id="customer-service-name"
+                    data-cy="name"
+                    v-model="customerServiceProcess.customerService.name"
                   />
                 </div>
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
-                  <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.endDate')">endDate</label>
+                  <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.serviceDate')"
+                    >serviceDate</label
+                  >
                   <input
                     readonly
                     type="text"
                     class="form-control"
-                    name="endDate"
-                    id="customer-service-endDate"
-                    data-cy="endDate"
-                    v-model="customerServiceProcess.customerService.endDate"
+                    name="serviceDate"
+                    id="customer-service-serviceDate"
+                    data-cy="serviceDate"
+                    v-model="customerServiceProcess.customerService.serviceDate"
                   />
                 </div>
               </div>

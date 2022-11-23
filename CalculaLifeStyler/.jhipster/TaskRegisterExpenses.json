@@ -1,0 +1,36 @@
+{
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldReadOnly": true
+    },
+    {
+      "fieldName": "serviceDate",
+      "fieldType": "LocalDate",
+      "fieldReadOnly": true
+    },
+    {
+      "fieldName": "expenseValue",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "expenseDescription",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "entityType": "user-task-form",
+  "processBpmnId": "CustomerServiceProcess",
+  "processEntityName": "CustomerServiceProcess",
+  "taskBpmnId": "TaskRegisterExpenses",
+  "domainEntityName": "CustomerService",
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "no",
+  "skipFakeData": true,
+  "name": "TaskRegisterExpenses",
+  "changelogDate": "20210401000004"
+}

@@ -37,16 +37,16 @@
                 <div class="form-group">
                   <label
                     class="form-control-label"
-                    v-text="$t('calculaLifeStylerApp.customerServiceStartForm.startDate')"
-                    for="customer-service-start-form-startDate"
-                    >Start Date</label
+                    v-text="$t('calculaLifeStylerApp.customerServiceStartForm.serviceDate')"
+                    for="customer-service-start-form-serviceDate"
+                    >Service Date</label
                   >
                   <b-input-group class="mb-3">
                     <b-input-group-prepend>
                       <b-form-datepicker
-                        aria-controls="customer-service-start-form-startDate"
-                        v-model="$v.customerServiceProcess.customerService.startDate.$model"
-                        name="startDate"
+                        aria-controls="customer-service-start-form-serviceDate"
+                        v-model="$v.customerServiceProcess.customerService.serviceDate.$model"
+                        name="serviceDate"
                         class="form-control"
                         :locale="currentLanguage"
                         button-only
@@ -57,58 +57,18 @@
                       </b-form-datepicker>
                     </b-input-group-prepend>
                     <b-form-input
-                      id="customer-service-start-form-startDate"
-                      data-cy="startDate"
+                      id="customer-service-start-form-serviceDate"
+                      data-cy="serviceDate"
                       type="text"
                       class="form-control"
-                      name="startDate"
+                      name="serviceDate"
                       :class="{
-                        valid: !$v.customerServiceProcess.customerService.startDate.$invalid,
-                        invalid: $v.customerServiceProcess.customerService.startDate.$invalid,
+                        valid: !$v.customerServiceProcess.customerService.serviceDate.$invalid,
+                        invalid: $v.customerServiceProcess.customerService.serviceDate.$invalid,
                       }"
-                      v-model="$v.customerServiceProcess.customerService.startDate.$model"
+                      v-model="$v.customerServiceProcess.customerService.serviceDate.$model"
                     />
                   </b-input-group>
-                </div>
-                <div class="form-group">
-                  <label
-                    class="form-control-label"
-                    v-text="$t('calculaLifeStylerApp.customerServiceStartForm.customerName')"
-                    for="customer-service-start-form-customerName"
-                    >Customer Name</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="customerName"
-                    id="customer-service-start-form-customerName"
-                    data-cy="customerName"
-                    :class="{
-                      valid: !$v.customerServiceProcess.customerService.customerName.$invalid,
-                      invalid: $v.customerServiceProcess.customerService.customerName.$invalid,
-                    }"
-                    v-model="$v.customerServiceProcess.customerService.customerName.$model"
-                  />
-                </div>
-                <div class="form-group">
-                  <label
-                    class="form-control-label"
-                    v-text="$t('calculaLifeStylerApp.customerServiceStartForm.employeeName')"
-                    for="customer-service-start-form-employeeName"
-                    >Employee Name</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="employeeName"
-                    id="customer-service-start-form-employeeName"
-                    data-cy="employeeName"
-                    :class="{
-                      valid: !$v.customerServiceProcess.customerService.employeeName.$invalid,
-                      invalid: $v.customerServiceProcess.customerService.employeeName.$invalid,
-                    }"
-                    v-model="$v.customerServiceProcess.customerService.employeeName.$model"
-                  />
                 </div>
               </div>
             </template>

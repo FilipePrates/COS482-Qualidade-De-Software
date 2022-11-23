@@ -1,6 +1,7 @@
 package com.mycompany.myapp.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import javax.persistence.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -20,11 +21,11 @@ public class CustomerService implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "start_date")
-    private String startDate;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "end_date")
-    private String endDate;
+    @Column(name = "service_date")
+    private LocalDate serviceDate;
 
     @Column(name = "customer_name")
     private String customerName;
@@ -33,7 +34,7 @@ public class CustomerService implements Serializable {
     private String employeeName;
 
     @Column(name = "customer_satisfaction")
-    private Integer customerSatisfaction;
+    private Boolean customerSatisfaction;
 
     @Column(name = "order_description")
     private String orderDescription;
@@ -64,30 +65,30 @@ public class CustomerService implements Serializable {
         return this;
     }
 
-    public String getStartDate() {
-        return this.startDate;
+    public String getName() {
+        return this.name;
     }
 
-    public CustomerService startDate(String startDate) {
-        this.startDate = startDate;
+    public CustomerService name(String name) {
+        this.name = name;
         return this;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEndDate() {
-        return this.endDate;
+    public LocalDate getServiceDate() {
+        return this.serviceDate;
     }
 
-    public CustomerService endDate(String endDate) {
-        this.endDate = endDate;
+    public CustomerService serviceDate(LocalDate serviceDate) {
+        this.serviceDate = serviceDate;
         return this;
     }
 
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public void setServiceDate(LocalDate serviceDate) {
+        this.serviceDate = serviceDate;
     }
 
     public String getCustomerName() {
@@ -116,16 +117,16 @@ public class CustomerService implements Serializable {
         this.employeeName = employeeName;
     }
 
-    public Integer getCustomerSatisfaction() {
+    public Boolean getCustomerSatisfaction() {
         return this.customerSatisfaction;
     }
 
-    public CustomerService customerSatisfaction(Integer customerSatisfaction) {
+    public CustomerService customerSatisfaction(Boolean customerSatisfaction) {
         this.customerSatisfaction = customerSatisfaction;
         return this;
     }
 
-    public void setCustomerSatisfaction(Integer customerSatisfaction) {
+    public void setCustomerSatisfaction(Boolean customerSatisfaction) {
         this.customerSatisfaction = customerSatisfaction;
     }
 
@@ -218,11 +219,11 @@ public class CustomerService implements Serializable {
     public String toString() {
         return "CustomerService{" +
             "id=" + getId() +
-            ", startDate='" + getStartDate() + "'" +
-            ", endDate='" + getEndDate() + "'" +
+            ", name='" + getName() + "'" +
+            ", serviceDate='" + getServiceDate() + "'" +
             ", customerName='" + getCustomerName() + "'" +
             ", employeeName='" + getEmployeeName() + "'" +
-            ", customerSatisfaction=" + getCustomerSatisfaction() +
+            ", customerSatisfaction='" + getCustomerSatisfaction() + "'" +
             ", orderDescription='" + getOrderDescription() + "'" +
             ", paymentValue=" + getPaymentValue() +
             ", paymentDescription='" + getPaymentDescription() + "'" +

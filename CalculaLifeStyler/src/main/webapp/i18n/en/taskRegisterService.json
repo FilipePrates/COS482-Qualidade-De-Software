@@ -1,0 +1,28 @@
+{
+  "calculaLifeStylerApp": {
+    "taskRegisterService": {
+      "home": {
+        "title": "Task Register Services",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Register Service",
+        "createOrEditLabel": "Create or edit a Task Register Service",
+        "notFound": "No Task Register Services found"
+      },
+      "created": "A new Task Register Service is created with identifier {{ param }}",
+      "updated": "A Task Register Service is updated with identifier {{ param }}",
+      "deleted": "A Task Register Service is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Register Service {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Register Service"
+      },
+      "id": "ID",
+      "name": "Name",
+      "serviceDate": "Service Date",
+      "orderDescription": "Order Description",
+      "customerName": "Customer Name",
+      "employeeName": "Employee Name"
+    }
+  }
+}

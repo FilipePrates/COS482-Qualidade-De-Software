@@ -15,6 +15,9 @@
         "customerService": "Customer Service",
         "customerServiceProcess": "Customer Service Process",
         "customerServiceStartForm": "Customer Service Start Form",
+        "taskRegisterService": "Task Register Service",
+        "taskRegisterExpenses": "Task Register Expenses",
+        "taskRegisterPayment": "Task Register Payment",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

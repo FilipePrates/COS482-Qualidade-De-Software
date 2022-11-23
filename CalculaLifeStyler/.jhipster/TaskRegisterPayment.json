@@ -2,19 +2,13 @@
   "fields": [
     {
       "fieldName": "name",
-      "fieldType": "String"
+      "fieldType": "String",
+      "fieldReadOnly": true
     },
     {
       "fieldName": "serviceDate",
-      "fieldType": "LocalDate"
-    },
-    {
-      "fieldName": "customerName",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "employeeName",
-      "fieldType": "String"
+      "fieldType": "LocalDate",
+      "fieldReadOnly": true
     },
     {
       "fieldName": "customerSatisfaction",
@@ -31,24 +25,20 @@
     {
       "fieldName": "paymentDescription",
       "fieldType": "String"
-    },
-    {
-      "fieldName": "expenseValue",
-      "fieldType": "Double"
-    },
-    {
-      "fieldName": "expenseDescription",
-      "fieldType": "String"
     }
   ],
   "relationships": [],
-  "entityType": "domain",
+  "entityType": "user-task-form",
+  "processBpmnId": "CustomerServiceProcess",
+  "processEntityName": "CustomerServiceProcess",
+  "taskBpmnId": "TaskRegisterPayment",
+  "domainEntityName": "CustomerService",
   "service": "serviceClass",
   "dto": "mapstruct",
   "jpaMetamodelFiltering": false,
-  "readOnly": true,
+  "readOnly": false,
   "pagination": "no",
-  "name": "CustomerService",
-  "changelogDate": "20210401000001",
-  "skipFakeData": true
+  "skipFakeData": true,
+  "name": "TaskRegisterPayment",
+  "changelogDate": "20210401000004"
 }

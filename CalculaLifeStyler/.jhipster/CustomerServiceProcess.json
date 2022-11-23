@@ -1,11 +1,11 @@
 {
   "fields": [
     {
-      "fieldName": "startDate",
-      "fieldType": "LocalDate"
+      "fieldName": "name",
+      "fieldType": "String"
     },
     {
-      "fieldName": "endDate",
+      "fieldName": "serviceDate",
       "fieldType": "LocalDate"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "fieldName": "customerSatisfaction",
-      "fieldType": "Integer"
+      "fieldType": "Boolean"
     },
     {
       "fieldName": "orderDescription",

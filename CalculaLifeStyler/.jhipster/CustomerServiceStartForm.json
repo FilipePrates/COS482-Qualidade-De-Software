@@ -5,16 +5,8 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "startDate",
+      "fieldName": "serviceDate",
       "fieldType": "LocalDate"
-    },
-    {
-      "fieldName": "customerName",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "employeeName",
-      "fieldType": "String"
     }
   ],
   "relationships": [],

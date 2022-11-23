@@ -1,10 +1,10 @@
 export interface ICustomerService {
   id?: number;
-  startDate?: string | null;
-  endDate?: string | null;
+  name?: string | null;
+  serviceDate?: Date | null;
   customerName?: string | null;
   employeeName?: string | null;
-  customerSatisfaction?: number | null;
+  customerSatisfaction?: boolean | null;
   orderDescription?: string | null;
   paymentValue?: number | null;
   paymentDescription?: string | null;
@@ -15,15 +15,17 @@ export interface ICustomerService {
 export class CustomerService implements ICustomerService {
   constructor(
     public id?: number,
-    public startDate?: string | null,
-    public endDate?: string | null,
+    public name?: string | null,
+    public serviceDate?: Date | null,
     public customerName?: string | null,
     public employeeName?: string | null,
-    public customerSatisfaction?: number | null,
+    public customerSatisfaction?: boolean | null,
     public orderDescription?: string | null,
     public paymentValue?: number | null,
     public paymentDescription?: string | null,
     public expenseValue?: number | null,
     public expenseDescription?: string | null
-  ) {}
+  ) {
+    this.customerSatisfaction = this.customerSatisfaction ?? false;
+  }
 }

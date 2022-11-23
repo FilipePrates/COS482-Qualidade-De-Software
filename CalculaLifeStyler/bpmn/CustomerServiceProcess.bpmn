@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0ykx3v9" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.5.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <bpmn:process id="CustomerServiceProcess" name="CustomerServiceProcess" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_03z9km8</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1i1ultc">
+      <bpmn:incoming>Flow_116hdtk</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_0rqmdjz" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_03z9km8" sourceRef="StartEvent_1" targetRef="TaskRegisterService" />
+    <bpmn:sequenceFlow id="Flow_1exxcbw" sourceRef="TaskRegisterPayment" targetRef="TaskRegisterExpenses" />
+    <bpmn:sequenceFlow id="Flow_116hdtk" sourceRef="TaskRegisterExpenses" targetRef="Event_1i1ultc" />
+    <bpmn:userTask id="TaskRegisterExpenses" name="Register Expenses">
+      <bpmn:documentation>In this section, all expenses related to the completion of a service must be tracked. Some examples are as follows: (1) Hair dye value; (2) Acrylic nail value; (3) cost of henna for micropigmentation and etc. These values are used to calculate the salon's billing at the end of the month. </bpmn:documentation>
+      <bpmn:incoming>Flow_1exxcbw</bpmn:incoming>
+      <bpmn:outgoing>Flow_116hdtk</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="TaskRegisterPayment" name="Register Payment">
+      <bpmn:documentation>In this section, all information related to the payment of the service provided must be completed. It is imperative that its explicited whether the payment was made in cash or by card for the correct calculation of the salon's accounting.
+</bpmn:documentation>
+      <bpmn:incoming>Flow_0hk7zpf</bpmn:incoming>
+      <bpmn:outgoing>Flow_1exxcbw</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="TaskRegisterService" name="Register Service">
+      <bpmn:documentation>In this section, all information related to customer service in LifeStyler Coiffeur must be filled in. All fields on the form are MANDATORY and must be filled in correctly by the employee who performed the service.</bpmn:documentation>
+      <bpmn:incoming>Flow_03z9km8</bpmn:incoming>
+      <bpmn:outgoing>Flow_0hk7zpf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0hk7zpf" sourceRef="TaskRegisterService" targetRef="TaskRegisterPayment" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="CustomerServiceProcess">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0ntdvg4_di" bpmnElement="Event_1i1ultc">
+        <dc:Bounds x="812" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0bczodl_di" bpmnElement="TaskRegisterExpenses">
+        <dc:Bounds x="640" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g210bf_di" bpmnElement="TaskRegisterPayment">
+        <dc:Bounds x="470" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1me92k8_di" bpmnElement="TaskRegisterService">
+        <dc:Bounds x="290" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_03z9km8_di" bpmnElement="Flow_03z9km8">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="290" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1exxcbw_di" bpmnElement="Flow_1exxcbw">
+        <di:waypoint x="570" y="117" />
+        <di:waypoint x="640" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_116hdtk_di" bpmnElement="Flow_116hdtk">
+        <di:waypoint x="740" y="117" />
+        <di:waypoint x="812" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hk7zpf_di" bpmnElement="Flow_0hk7zpf">
+        <di:waypoint x="390" y="117" />
+        <di:waypoint x="470" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

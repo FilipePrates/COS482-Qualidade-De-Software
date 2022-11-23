@@ -19,9 +19,7 @@
       },
       "id": "ID",
       "name": "Name",
-      "startDate": "Start Date",
-      "customerName": "Customer Name",
-      "employeeName": "Employee Name"
+      "serviceDate": "Service Date"
     }
   }
 }

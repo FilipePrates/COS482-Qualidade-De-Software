@@ -11,9 +11,7 @@ const validations: any = {
   customerServiceProcess: {
     customerService: {
       name: {},
-      startDate: {},
-      customerName: {},
-      employeeName: {},
+      serviceDate: {},
     },
   },
 };

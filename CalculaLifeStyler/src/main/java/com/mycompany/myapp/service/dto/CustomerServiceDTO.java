@@ -1,6 +1,7 @@
 package com.mycompany.myapp.service.dto;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Objects;
 
 /**
@@ -10,15 +11,15 @@ public class CustomerServiceDTO implements Serializable {
 
     private Long id;
 
-    private String startDate;
+    private String name;
 
-    private String endDate;
+    private LocalDate serviceDate;
 
     private String customerName;
 
     private String employeeName;
 
-    private Integer customerSatisfaction;
+    private Boolean customerSatisfaction;
 
     private String orderDescription;
 
@@ -38,20 +39,20 @@ public class CustomerServiceDTO implements Serializable {
         this.id = id;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public String getName() {
+        return name;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getEndDate() {
-        return endDate;
+    public LocalDate getServiceDate() {
+        return serviceDate;
     }
 
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public void setServiceDate(LocalDate serviceDate) {
+        this.serviceDate = serviceDate;
     }
 
     public String getCustomerName() {
@@ -70,11 +71,11 @@ public class CustomerServiceDTO implements Serializable {
         this.employeeName = employeeName;
     }
 
-    public Integer getCustomerSatisfaction() {
+    public Boolean getCustomerSatisfaction() {
         return customerSatisfaction;
     }
 
-    public void setCustomerSatisfaction(Integer customerSatisfaction) {
+    public void setCustomerSatisfaction(Boolean customerSatisfaction) {
         this.customerSatisfaction = customerSatisfaction;
     }
 
@@ -144,11 +145,11 @@ public class CustomerServiceDTO implements Serializable {
     public String toString() {
         return "CustomerServiceDTO{" +
             "id=" + getId() +
-            ", startDate='" + getStartDate() + "'" +
-            ", endDate='" + getEndDate() + "'" +
+            ", name='" + getName() + "'" +
+            ", serviceDate='" + getServiceDate() + "'" +
             ", customerName='" + getCustomerName() + "'" +
             ", employeeName='" + getEmployeeName() + "'" +
-            ", customerSatisfaction=" + getCustomerSatisfaction() +
+            ", customerSatisfaction='" + getCustomerSatisfaction() + "'" +
             ", orderDescription='" + getOrderDescription() + "'" +
             ", paymentValue=" + getPaymentValue() +
             ", paymentDescription='" + getPaymentDescription() + "'" +

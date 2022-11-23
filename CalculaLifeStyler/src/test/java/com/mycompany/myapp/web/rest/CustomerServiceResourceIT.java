@@ -10,6 +10,8 @@ import com.mycompany.myapp.domain.CustomerService;
 import com.mycompany.myapp.repository.CustomerServiceRepository;
 import com.mycompany.myapp.service.dto.CustomerServiceDTO;
 import com.mycompany.myapp.service.mapper.CustomerServiceMapper;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
@@ -31,11 +33,11 @@ import org.springframework.transaction.annotation.Transactional;
 @WithMockUser
 class CustomerServiceResourceIT {
 
-    private static final String DEFAULT_START_DATE = "AAAAAAAAAA";
-    private static final String UPDATED_START_DATE = "BBBBBBBBBB";
+    private static final String DEFAULT_NAME = "AAAAAAAAAA";
+    private static final String UPDATED_NAME = "BBBBBBBBBB";
 
-    private static final String DEFAULT_END_DATE = "AAAAAAAAAA";
-    private static final String UPDATED_END_DATE = "BBBBBBBBBB";
+    private static final LocalDate DEFAULT_SERVICE_DATE = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_SERVICE_DATE = LocalDate.now(ZoneId.systemDefault());
 
     private static final String DEFAULT_CUSTOMER_NAME = "AAAAAAAAAA";
     private static final String UPDATED_CUSTOMER_NAME = "BBBBBBBBBB";
@@ -43,8 +45,8 @@ class CustomerServiceResourceIT {
     private static final String DEFAULT_EMPLOYEE_NAME = "AAAAAAAAAA";
     private static final String UPDATED_EMPLOYEE_NAME = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_CUSTOMER_SATISFACTION = 1;
-    private static final Integer UPDATED_CUSTOMER_SATISFACTION = 2;
+    private static final Boolean DEFAULT_CUSTOMER_SATISFACTION = false;
+    private static final Boolean UPDATED_CUSTOMER_SATISFACTION = true;
 
     private static final String DEFAULT_ORDER_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_ORDER_DESCRIPTION = "BBBBBBBBBB";
@@ -89,8 +91,8 @@ class CustomerServiceResourceIT {
      */
     public static CustomerService createEntity(EntityManager em) {
         CustomerService customerService = new CustomerService()
-            .startDate(DEFAULT_START_DATE)
-            .endDate(DEFAULT_END_DATE)
+            .name(DEFAULT_NAME)
+            .serviceDate(DEFAULT_SERVICE_DATE)
             .customerName(DEFAULT_CUSTOMER_NAME)
             .employeeName(DEFAULT_EMPLOYEE_NAME)
             .customerSatisfaction(DEFAULT_CUSTOMER_SATISFACTION)
@@ -110,8 +112,8 @@ class CustomerServiceResourceIT {
      */
     public static CustomerService createUpdatedEntity(EntityManager em) {
         CustomerService customerService = new CustomerService()
-            .startDate(UPDATED_START_DATE)
-            .endDate(UPDATED_END_DATE)
+            .name(UPDATED_NAME)
+            .serviceDate(UPDATED_SERVICE_DATE)
             .customerName(UPDATED_CUSTOMER_NAME)
             .employeeName(UPDATED_EMPLOYEE_NAME)
             .customerSatisfaction(UPDATED_CUSTOMER_SATISFACTION)
@@ -140,11 +142,11 @@ class CustomerServiceResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(customerService.getId().intValue())))
-            .andExpect(jsonPath("$.[*].startDate").value(hasItem(DEFAULT_START_DATE)))
-            .andExpect(jsonPath("$.[*].endDate").value(hasItem(DEFAULT_END_DATE)))
+            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
+            .andExpect(jsonPath("$.[*].serviceDate").value(hasItem(DEFAULT_SERVICE_DATE.toString())))
             .andExpect(jsonPath("$.[*].customerName").value(hasItem(DEFAULT_CUSTOMER_NAME)))
             .andExpect(jsonPath("$.[*].employeeName").value(hasItem(DEFAULT_EMPLOYEE_NAME)))
-            .andExpect(jsonPath("$.[*].customerSatisfaction").value(hasItem(DEFAULT_CUSTOMER_SATISFACTION)))
+            .andExpect(jsonPath("$.[*].customerSatisfaction").value(hasItem(DEFAULT_CUSTOMER_SATISFACTION.booleanValue())))
             .andExpect(jsonPath("$.[*].orderDescription").value(hasItem(DEFAULT_ORDER_DESCRIPTION)))
             .andExpect(jsonPath("$.[*].paymentValue").value(hasItem(DEFAULT_PAYMENT_VALUE.doubleValue())))
             .andExpect(jsonPath("$.[*].paymentDescription").value(hasItem(DEFAULT_PAYMENT_DESCRIPTION)))
@@ -164,11 +166,11 @@ class CustomerServiceResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(customerService.getId().intValue()))
-            .andExpect(jsonPath("$.startDate").value(DEFAULT_START_DATE))
-            .andExpect(jsonPath("$.endDate").value(DEFAULT_END_DATE))
+            .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
+            .andExpect(jsonPath("$.serviceDate").value(DEFAULT_SERVICE_DATE.toString()))
             .andExpect(jsonPath("$.customerName").value(DEFAULT_CUSTOMER_NAME))
             .andExpect(jsonPath("$.employeeName").value(DEFAULT_EMPLOYEE_NAME))
-            .andExpect(jsonPath("$.customerSatisfaction").value(DEFAULT_CUSTOMER_SATISFACTION))
+            .andExpect(jsonPath("$.customerSatisfaction").value(DEFAULT_CUSTOMER_SATISFACTION.booleanValue()))
             .andExpect(jsonPath("$.orderDescription").value(DEFAULT_ORDER_DESCRIPTION))
             .andExpect(jsonPath("$.paymentValue").value(DEFAULT_PAYMENT_VALUE.doubleValue()))
             .andExpect(jsonPath("$.paymentDescription").value(DEFAULT_PAYMENT_DESCRIPTION))

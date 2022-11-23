@@ -1,0 +1,27 @@
+{
+  "calculaLifeStylerApp": {
+    "taskRegisterExpenses": {
+      "home": {
+        "title": "Task Register Expenses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Task Register Expenses",
+        "createOrEditLabel": "Create or edit a Task Register Expenses",
+        "notFound": "No Task Register Expenses found"
+      },
+      "created": "A new Task Register Expenses is created with identifier {{ param }}",
+      "updated": "A Task Register Expenses is updated with identifier {{ param }}",
+      "deleted": "A Task Register Expenses is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Task Register Expenses {{ id }}?"
+      },
+      "detail": {
+        "title": "Task Register Expenses"
+      },
+      "id": "ID",
+      "name": "Name",
+      "serviceDate": "Service Date",
+      "expenseValue": "Expense Value",
+      "expenseDescription": "Expense Description"
+    }
+  }
+}
