@@ -29,6 +29,9 @@
             <column name="customer_satisfaction" type="boolean">
                 <constraints nullable="true" />
             </column>
+            <column name="is_there_extra_expenses" type="boolean">
+                <constraints nullable="true" />
+            </column>
             <column name="order_description" type="varchar(255)">
                 <constraints nullable="true" />
             </column>

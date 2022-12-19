@@ -19,6 +19,10 @@
       "fieldType": "String"
     },
     {
+      "fieldName": "isThereExtraExpenses",
+      "fieldType": "Boolean"
+    },
+    {
       "fieldName": "paymentValue",
       "fieldType": "Double"
     },

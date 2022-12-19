@@ -97,6 +97,22 @@
               </div>
               <div class="card-body py-0">
                 <div class="form-group">
+                  <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.isThereExtraExpenses')"
+                    >isThereExtraExpenses</label
+                  >
+                  <input
+                    readonly
+                    type="text"
+                    class="form-control"
+                    name="isThereExtraExpenses"
+                    id="customer-service-isThereExtraExpenses"
+                    data-cy="isThereExtraExpenses"
+                    v-model="customerServiceProcess.customerService.isThereExtraExpenses"
+                  />
+                </div>
+              </div>
+              <div class="card-body py-0">
+                <div class="form-group">
                   <label class="form-control-label" v-text="$t('calculaLifeStylerApp.customerServiceProcess.orderDescription')"
                     >orderDescription</label
                   >

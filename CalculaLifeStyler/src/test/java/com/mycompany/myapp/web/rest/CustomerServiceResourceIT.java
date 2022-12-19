@@ -48,6 +48,9 @@ class CustomerServiceResourceIT {
     private static final Boolean DEFAULT_CUSTOMER_SATISFACTION = false;
     private static final Boolean UPDATED_CUSTOMER_SATISFACTION = true;
 
+    private static final Boolean DEFAULT_IS_THERE_EXTRA_EXPENSES = false;
+    private static final Boolean UPDATED_IS_THERE_EXTRA_EXPENSES = true;
+
     private static final String DEFAULT_ORDER_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_ORDER_DESCRIPTION = "BBBBBBBBBB";
 
@@ -96,6 +99,7 @@ class CustomerServiceResourceIT {
             .customerName(DEFAULT_CUSTOMER_NAME)
             .employeeName(DEFAULT_EMPLOYEE_NAME)
             .customerSatisfaction(DEFAULT_CUSTOMER_SATISFACTION)
+            .isThereExtraExpenses(DEFAULT_IS_THERE_EXTRA_EXPENSES)
             .orderDescription(DEFAULT_ORDER_DESCRIPTION)
             .paymentValue(DEFAULT_PAYMENT_VALUE)
             .paymentDescription(DEFAULT_PAYMENT_DESCRIPTION)
@@ -117,6 +121,7 @@ class CustomerServiceResourceIT {
             .customerName(UPDATED_CUSTOMER_NAME)
             .employeeName(UPDATED_EMPLOYEE_NAME)
             .customerSatisfaction(UPDATED_CUSTOMER_SATISFACTION)
+            .isThereExtraExpenses(UPDATED_IS_THERE_EXTRA_EXPENSES)
             .orderDescription(UPDATED_ORDER_DESCRIPTION)
             .paymentValue(UPDATED_PAYMENT_VALUE)
             .paymentDescription(UPDATED_PAYMENT_DESCRIPTION)
@@ -147,6 +152,7 @@ class CustomerServiceResourceIT {
             .andExpect(jsonPath("$.[*].customerName").value(hasItem(DEFAULT_CUSTOMER_NAME)))
             .andExpect(jsonPath("$.[*].employeeName").value(hasItem(DEFAULT_EMPLOYEE_NAME)))
             .andExpect(jsonPath("$.[*].customerSatisfaction").value(hasItem(DEFAULT_CUSTOMER_SATISFACTION.booleanValue())))
+            .andExpect(jsonPath("$.[*].isThereExtraExpenses").value(hasItem(DEFAULT_IS_THERE_EXTRA_EXPENSES.booleanValue())))
             .andExpect(jsonPath("$.[*].orderDescription").value(hasItem(DEFAULT_ORDER_DESCRIPTION)))
             .andExpect(jsonPath("$.[*].paymentValue").value(hasItem(DEFAULT_PAYMENT_VALUE.doubleValue())))
             .andExpect(jsonPath("$.[*].paymentDescription").value(hasItem(DEFAULT_PAYMENT_DESCRIPTION)))
@@ -171,6 +177,7 @@ class CustomerServiceResourceIT {
             .andExpect(jsonPath("$.customerName").value(DEFAULT_CUSTOMER_NAME))
             .andExpect(jsonPath("$.employeeName").value(DEFAULT_EMPLOYEE_NAME))
             .andExpect(jsonPath("$.customerSatisfaction").value(DEFAULT_CUSTOMER_SATISFACTION.booleanValue()))
+            .andExpect(jsonPath("$.isThereExtraExpenses").value(DEFAULT_IS_THERE_EXTRA_EXPENSES.booleanValue()))
             .andExpect(jsonPath("$.orderDescription").value(DEFAULT_ORDER_DESCRIPTION))
             .andExpect(jsonPath("$.paymentValue").value(DEFAULT_PAYMENT_VALUE.doubleValue()))
             .andExpect(jsonPath("$.paymentDescription").value(DEFAULT_PAYMENT_DESCRIPTION))

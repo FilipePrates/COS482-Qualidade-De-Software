@@ -21,6 +21,10 @@
       "fieldType": "Boolean"
     },
     {
+      "fieldName": "isThereExtraExpenses",
+      "fieldType": "Boolean"
+    },
+    {
       "fieldName": "orderDescription",
       "fieldType": "String"
     },

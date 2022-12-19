@@ -20,6 +20,7 @@ public interface TaskRegisterPaymentMapper {
     @Mapping(target = "serviceDate", source = "serviceDate")
     @Mapping(target = "customerSatisfaction", source = "customerSatisfaction")
     @Mapping(target = "orderDescription", source = "orderDescription")
+    @Mapping(target = "isThereExtraExpenses", source = "isThereExtraExpenses")
     @Mapping(target = "paymentValue", source = "paymentValue")
     @Mapping(target = "paymentDescription", source = "paymentDescription")
     CustomerServiceDTO toCustomerServiceDTO(CustomerService customerService);

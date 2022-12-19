@@ -81,6 +81,9 @@ public class TaskRegisterPaymentService {
         customerServiceDTO.setOrderDescription(
             taskRegisterPaymentContext.getCustomerServiceProcess().getCustomerService().getOrderDescription()
         );
+        customerServiceDTO.setIsThereExtraExpenses(
+            taskRegisterPaymentContext.getCustomerServiceProcess().getCustomerService().getIsThereExtraExpenses()
+        );
         customerServiceDTO.setPaymentValue(taskRegisterPaymentContext.getCustomerServiceProcess().getCustomerService().getPaymentValue());
         customerServiceDTO.setPaymentDescription(
             taskRegisterPaymentContext.getCustomerServiceProcess().getCustomerService().getPaymentDescription()

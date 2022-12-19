@@ -23,6 +23,9 @@
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.customerName')">Customer Name</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.employeeName')">Employee Name</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.customerSatisfaction')">Customer Satisfaction</span></th>
+            <th scope="row">
+              <span v-text="$t('calculaLifeStylerApp.customerService.isThereExtraExpenses')">Is There Extra Expenses</span>
+            </th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.orderDescription')">Order Description</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.paymentValue')">Payment Value</span></th>
             <th scope="row"><span v-text="$t('calculaLifeStylerApp.customerService.paymentDescription')">Payment Description</span></th>
@@ -43,6 +46,7 @@
             <td>{{ customerService.customerName }}</td>
             <td>{{ customerService.employeeName }}</td>
             <td>{{ customerService.customerSatisfaction }}</td>
+            <td>{{ customerService.isThereExtraExpenses }}</td>
             <td>{{ customerService.orderDescription }}</td>
             <td>{{ customerService.paymentValue }}</td>
             <td>{{ customerService.paymentDescription }}</td>

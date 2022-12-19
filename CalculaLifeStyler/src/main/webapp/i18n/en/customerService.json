@@ -15,6 +15,7 @@
       "customerName": "Customer Name",
       "employeeName": "Employee Name",
       "customerSatisfaction": "Customer Satisfaction",
+      "isThereExtraExpenses": "Is There Extra Expenses",
       "orderDescription": "Order Description",
       "paymentValue": "Payment Value",
       "paymentDescription": "Payment Description",

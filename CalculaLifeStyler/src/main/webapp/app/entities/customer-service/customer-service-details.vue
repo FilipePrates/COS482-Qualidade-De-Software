@@ -37,6 +37,12 @@
             <span>{{ customerService.customerSatisfaction }}</span>
           </dd>
           <dt>
+            <span v-text="$t('calculaLifeStylerApp.customerService.isThereExtraExpenses')">Is There Extra Expenses</span>
+          </dt>
+          <dd>
+            <span>{{ customerService.isThereExtraExpenses }}</span>
+          </dd>
+          <dt>
             <span v-text="$t('calculaLifeStylerApp.customerService.orderDescription')">Order Description</span>
           </dt>
           <dd>

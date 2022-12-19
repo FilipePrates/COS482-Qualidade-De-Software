@@ -95,6 +95,26 @@
             <div class="form-group">
               <label
                 class="form-control-label"
+                v-text="$t('calculaLifeStylerApp.taskRegisterPayment.isThereExtraExpenses')"
+                for="task-register-payment-isThereExtraExpenses"
+                >Is There Extra Expenses</label
+              >
+              <input
+                type="checkbox"
+                class="form-check"
+                name="isThereExtraExpenses"
+                id="task-register-payment-isThereExtraExpenses"
+                data-cy="isThereExtraExpenses"
+                :class="{
+                  valid: !$v.taskContext.customerServiceProcess.customerService.isThereExtraExpenses.$invalid,
+                  invalid: $v.taskContext.customerServiceProcess.customerService.isThereExtraExpenses.$invalid,
+                }"
+                v-model="$v.taskContext.customerServiceProcess.customerService.isThereExtraExpenses.$model"
+              />
+            </div>
+            <div class="form-group">
+              <label
+                class="form-control-label"
                 v-text="$t('calculaLifeStylerApp.taskRegisterPayment.paymentValue')"
                 for="task-register-payment-paymentValue"
                 >Payment Value</label

@@ -33,7 +33,20 @@ describe('Service Tests', () => {
     beforeEach(() => {
       service = new CustomerServiceService();
       currentDate = new Date();
-      elemDefault = new CustomerService(0, 'AAAAAAA', currentDate, 'AAAAAAA', 'AAAAAAA', false, 'AAAAAAA', 0, 'AAAAAAA', 0, 'AAAAAAA');
+      elemDefault = new CustomerService(
+        0,
+        'AAAAAAA',
+        currentDate,
+        'AAAAAAA',
+        'AAAAAAA',
+        false,
+        false,
+        'AAAAAAA',
+        0,
+        'AAAAAAA',
+        0,
+        'AAAAAAA'
+      );
     });
 
     describe('Service methods', () => {
@@ -69,6 +82,7 @@ describe('Service Tests', () => {
             customerName: 'BBBBBB',
             employeeName: 'BBBBBB',
             customerSatisfaction: true,
+            isThereExtraExpenses: true,
             orderDescription: 'BBBBBB',
             paymentValue: 1,
             paymentDescription: 'BBBBBB',

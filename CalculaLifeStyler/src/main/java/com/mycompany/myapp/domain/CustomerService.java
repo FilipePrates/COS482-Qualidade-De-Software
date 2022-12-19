@@ -36,6 +36,9 @@ public class CustomerService implements Serializable {
     @Column(name = "customer_satisfaction")
     private Boolean customerSatisfaction;
 
+    @Column(name = "is_there_extra_expenses")
+    private Boolean isThereExtraExpenses;
+
     @Column(name = "order_description")
     private String orderDescription;
 
@@ -128,6 +131,19 @@ public class CustomerService implements Serializable {
 
     public void setCustomerSatisfaction(Boolean customerSatisfaction) {
         this.customerSatisfaction = customerSatisfaction;
+    }
+
+    public Boolean getIsThereExtraExpenses() {
+        return this.isThereExtraExpenses;
+    }
+
+    public CustomerService isThereExtraExpenses(Boolean isThereExtraExpenses) {
+        this.isThereExtraExpenses = isThereExtraExpenses;
+        return this;
+    }
+
+    public void setIsThereExtraExpenses(Boolean isThereExtraExpenses) {
+        this.isThereExtraExpenses = isThereExtraExpenses;
     }
 
     public String getOrderDescription() {
@@ -224,6 +240,7 @@ public class CustomerService implements Serializable {
             ", customerName='" + getCustomerName() + "'" +
             ", employeeName='" + getEmployeeName() + "'" +
             ", customerSatisfaction='" + getCustomerSatisfaction() + "'" +
+            ", isThereExtraExpenses='" + getIsThereExtraExpenses() + "'" +
             ", orderDescription='" + getOrderDescription() + "'" +
             ", paymentValue=" + getPaymentValue() +
             ", paymentDescription='" + getPaymentDescription() + "'" +

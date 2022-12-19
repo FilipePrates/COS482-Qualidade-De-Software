@@ -11,6 +11,7 @@ const validations: any = {
         serviceDate: {},
         customerSatisfaction: {},
         orderDescription: {},
+        isThereExtraExpenses: {},
         paymentValue: {},
         paymentDescription: {},
       },

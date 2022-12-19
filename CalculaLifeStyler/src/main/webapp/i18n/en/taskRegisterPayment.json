@@ -22,6 +22,7 @@
       "serviceDate": "Service Date",
       "customerSatisfaction": "Customer Satisfaction",
       "orderDescription": "Order Description",
+      "isThereExtraExpenses": "Is There Extra Expenses",
       "paymentValue": "Payment Value",
       "paymentDescription": "Payment Description"
     }

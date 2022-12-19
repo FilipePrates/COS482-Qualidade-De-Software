@@ -61,6 +61,20 @@
               />
             </div>
             <div class="form-group">
+              <label class="form-control-label" v-text="$t('calculaLifeStylerApp.taskRegisterPayment.isThereExtraExpenses')"
+                >isThereExtraExpenses</label
+              >
+              <input
+                readonly
+                type="text"
+                class="form-control"
+                name="isThereExtraExpenses"
+                id="customer-service-isThereExtraExpenses"
+                data-cy="isThereExtraExpenses"
+                v-model="taskContext.customerServiceProcess.customerService.isThereExtraExpenses"
+              />
+            </div>
+            <div class="form-group">
               <label class="form-control-label" v-text="$t('calculaLifeStylerApp.taskRegisterPayment.paymentValue')">paymentValue</label>
               <input
                 readonly

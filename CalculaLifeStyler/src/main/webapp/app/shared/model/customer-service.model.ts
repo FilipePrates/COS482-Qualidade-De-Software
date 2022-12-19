@@ -5,6 +5,7 @@ export interface ICustomerService {
   customerName?: string | null;
   employeeName?: string | null;
   customerSatisfaction?: boolean | null;
+  isThereExtraExpenses?: boolean | null;
   orderDescription?: string | null;
   paymentValue?: number | null;
   paymentDescription?: string | null;
@@ -20,6 +21,7 @@ export class CustomerService implements ICustomerService {
     public customerName?: string | null,
     public employeeName?: string | null,
     public customerSatisfaction?: boolean | null,
+    public isThereExtraExpenses?: boolean | null,
     public orderDescription?: string | null,
     public paymentValue?: number | null,
     public paymentDescription?: string | null,
@@ -27,5 +29,6 @@ export class CustomerService implements ICustomerService {
     public expenseDescription?: string | null
   ) {
     this.customerSatisfaction = this.customerSatisfaction ?? false;
+    this.isThereExtraExpenses = this.isThereExtraExpenses ?? false;
   }
 }

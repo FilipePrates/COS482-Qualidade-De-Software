@@ -21,6 +21,8 @@ public class CustomerServiceDTO implements Serializable {
 
     private Boolean customerSatisfaction;
 
+    private Boolean isThereExtraExpenses;
+
     private String orderDescription;
 
     private Double paymentValue;
@@ -77,6 +79,14 @@ public class CustomerServiceDTO implements Serializable {
 
     public void setCustomerSatisfaction(Boolean customerSatisfaction) {
         this.customerSatisfaction = customerSatisfaction;
+    }
+
+    public Boolean getIsThereExtraExpenses() {
+        return isThereExtraExpenses;
+    }
+
+    public void setIsThereExtraExpenses(Boolean isThereExtraExpenses) {
+        this.isThereExtraExpenses = isThereExtraExpenses;
     }
 
     public String getOrderDescription() {
@@ -150,6 +160,7 @@ public class CustomerServiceDTO implements Serializable {
             ", customerName='" + getCustomerName() + "'" +
             ", employeeName='" + getEmployeeName() + "'" +
             ", customerSatisfaction='" + getCustomerSatisfaction() + "'" +
+            ", isThereExtraExpenses='" + getIsThereExtraExpenses() + "'" +
             ", orderDescription='" + getOrderDescription() + "'" +
             ", paymentValue=" + getPaymentValue() +
             ", paymentDescription='" + getPaymentDescription() + "'" +
